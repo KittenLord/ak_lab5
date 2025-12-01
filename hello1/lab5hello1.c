@@ -63,7 +63,7 @@ static void __exit lab5hello1_exit(void)
     TimestampNode *e, *n;
 
     list_for_each_entry_safe(e, n, &timestamps.stamps, node) {
-        pr_info("Stamp %lld took %lldns (%lld -> %lld)\n", e->timeEnd - e->timeStart, e->timeStart, e->timeEnd);
+        pr_info("Stamp %d took %lldns (%lld -> %lld)\n", i++, e->timeEnd - e->timeStart, e->timeStart, e->timeEnd);
 
         list_del(&e->node);
         kfree(e);

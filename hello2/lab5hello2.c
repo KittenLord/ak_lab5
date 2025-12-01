@@ -24,10 +24,10 @@ static int __init lab5hello2_init(void)
 
     if(false) {}
     else if(amount == 0 || (6 <= amount && amount <= 10)) {
-        printk(KERN_EMERG "WARNING: Recommended value for `amount` is 1..=5. Received value: %d\n", amount);
+        pr_warn(KERN_EMERG "WARNING: Recommended value for `amount` is 1..=5. Received value: %d\n", amount);
     }
     else if(amount > 10) {
-        printk(KERN_EMERG "ERROR: Recommended value for `amount` is 1..=5. Received value: %d\n", amount);
+        pr_err(KERN_EMERG "ERROR: Recommended value for `amount` is 1..=5. Received value: %d\n", amount);
         return -EINVAL;
     }
 
