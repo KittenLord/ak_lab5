@@ -1,0 +1,2 @@
+obj-m := lab5hello1.o
+# ccflags-y += 
